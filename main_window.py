@@ -6,9 +6,11 @@ class MainWindow(tk.Tk):
         super().__init__()
         self.title("CalculatorPro")
         self.geometry("800x600")
-        self.iconbitmap("images/icon.ico")
 
-        self.label_1 = tk.Label(self, text="Hello again...")
+        self.img = tk.PhotoImage(file="images/icon.png")
+        self.iconphoto(False, self.img)
+
+        self.label_1 = tk.Label(self, image=self.img)
         self.label_1.pack()
 
 
